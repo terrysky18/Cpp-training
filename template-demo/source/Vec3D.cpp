@@ -20,6 +20,10 @@ Vec3D<T>::Vec3D(T new_x, T new_y, T new_z)
 }
 
 template<typename T>
+Vec3D<T>::~Vec3D()
+{}
+
+template<typename T>
 void Vec3D<T>::setX(T new_x)
 {
 	x = new_x;

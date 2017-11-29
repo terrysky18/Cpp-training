@@ -15,6 +15,7 @@ private:
 	T x, y;
 public:
 	Vec2D() {};
+	~Vec2D() {};
 	Vec2D(T new_x, T new_y)
 	{
 		x = new_x;

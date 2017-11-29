@@ -16,6 +16,7 @@ private:
 public:
 	Vec3D();
 	Vec3D(T new_x, T new_y, T new_z);
+	~Vec3D();
 	void setX(T new_x);
 	void setY(T new_y);
 	void setZ(T new_z);
