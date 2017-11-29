@@ -8,7 +8,7 @@ http://math60082.blogspot.com/2013/02/question-write-function-to-calculate-nx.ht
 #include <iostream>
 #include <cmath>
 #include <string>
-#include "NormalDistribution.hpp"
+#include "../header/NormalDistribution.hpp"
 
 using std::cout;
 using std::cin;

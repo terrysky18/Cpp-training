@@ -6,8 +6,8 @@ Source file for European option class:
 
 #include <string>
 #include <cmath>
-#include "EuropeanOption.hpp"
-#include "NormalDistribution.hpp"
+#include "../header/EuropeanOption.hpp"
+#include "../header/NormalDistribution.hpp"
 
 // Default constructor
 EuropeanOption::EuropeanOption()
@@ -141,7 +141,7 @@ void EuropeanOption::copy(const EuropeanOption& o2)
 // Kernel Functions
 double EuropeanOption::CallPrice() const
 {
-	NormalDistribution N = NormalDistribution(3500);
+	NormalDistribution N = NormalDistribution(4000);
 	double tmp = sig * sqrt(T);
 	double d1 = (log(U/K) + (b + (sig*sig)*0.5) * T) / tmp;
 	double d2 = d1 - tmp;
@@ -153,7 +153,7 @@ double EuropeanOption::CallPrice() const
 
 double EuropeanOption::PutPrice() const
 {
-	NormalDistribution N = NormalDistribution(3500);
+	NormalDistribution N = NormalDistribution(4000);
 	double tmp = sig * sqrt(T);
 	double d1 = (log(U/K) + (b + (sig*sig)*0.5) * T) / tmp;
 	double d2 = d1 - tmp;
@@ -165,7 +165,7 @@ double EuropeanOption::PutPrice() const
 
 double EuropeanOption::CallDelta() const
 {
-	NormalDistribution N = NormalDistribution(3500);
+	NormalDistribution N = NormalDistribution(4000);
 	double tmp = sig * sqrt(T);
 	double d1 = (log(U/K) + (b + (sig*sig)*0.5) * T) / tmp;
 	double normDis = N.normalDistribution(d1);
@@ -175,7 +175,7 @@ double EuropeanOption::CallDelta() const
 
 double EuropeanOption::PutDelta() const
 {
-	NormalDistribution N = NormalDistribution(3500);
+	NormalDistribution N = NormalDistribution(4000);
 	double tmp = sig * sqrt(T);
 	double d1 = (log(U/K) + (b + (sig*sig)*0.5) * T) / tmp;
 	double normDis = N.normalDistribution(d1);

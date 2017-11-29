@@ -5,7 +5,7 @@ Source file for normal distribution class
 */
 
 #include <cmath>
-#include "NormalDistribution.hpp"
+#include "../header/NormalDistribution.hpp"
 
 // Default constructor, 2000 as default step number
 NormalDistribution::NormalDistribution()
